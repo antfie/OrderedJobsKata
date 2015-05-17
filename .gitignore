@@ -1,0 +1,8 @@
+_NCrunch*
+packages
+bin
+obj
+*.user
+*.suo
+*.ncrunchsolution
+*.ncrunchproject
