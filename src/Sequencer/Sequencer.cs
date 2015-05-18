@@ -43,12 +43,14 @@ namespace Implementation
       for (var repetition = 0; repetition < jobs.Count; repetition++)
       {
         jobs.ForEach(job => ProcessJob(jobSequence, job));
+
+        if (jobSequence.Count == jobs.Count)
+        {
+          return;
+        }
       }
 
-      if (jobSequence.Count != jobs.Count)
-      {
-        throw new CircularJobDependencyChainException();
-      }
+      throw new CircularJobDependencyChainException();
     }
 
     private static void ProcessJob(ICollection<string> jobSequence, string job)
