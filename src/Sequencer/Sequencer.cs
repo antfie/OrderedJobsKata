@@ -56,8 +56,8 @@ namespace Implementation
     private static void ProcessJob(ICollection<string> jobSequence, string job)
     {
       var operands = job.Split(DependencySignature);
-      var leftjob = operands[0];
-      var rightJob = operands[1];
+      var leftjob = operands.First();
+      var rightJob = operands.Last();
 
       AssertNotSelfReferencingJob(leftjob, rightJob);
 
