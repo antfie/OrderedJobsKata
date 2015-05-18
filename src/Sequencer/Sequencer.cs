@@ -20,7 +20,7 @@ namespace Implementation
 
     private static string RemoveWhitespace(string jobsToSequence)
     {
-      return jobsToSequence.Replace(" ", "");
+      return jobsToSequence.Replace(" ", string.Empty);
     }
 
     private static string GetSequencedJobs(string jobsToSequence)
