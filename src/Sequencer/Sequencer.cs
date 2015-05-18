@@ -10,7 +10,7 @@ namespace Implementation
 
     public string Sequence(string jobsToSequence)
     {
-      if (jobsToSequence == string.Empty)
+      if (string.IsNullOrWhiteSpace(jobsToSequence))
       {
         return string.Empty;
       }
